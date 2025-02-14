@@ -41,8 +41,12 @@ html, body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     flex: 1;
     background-image: url(../img/FondoGris.webp);
+    background-repeat: no-repeat;
 }
 footer {
     display: flex;
@@ -126,6 +130,86 @@ footer {
     padding: 10px;
     font-size: 16px;
 }
+.ludopatia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.image-button {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-image {
+    width: 100%;
+    height: auto;
+    max-height: 80px; 
+    z-index: 1;
+}
+
+.icon-left, .icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: auto;
+    z-index: 2;
+}
+
+.icon-left {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%) translateY(-3px); 
+    width: 30px;
+    height: auto;
+    z-index: 2;
+    left: 10%; 
+}
+
+.icon-right {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 30px;
+    height: auto;
+    z-index: 2;
+    right: 10%; 
+}
+
+
+.button-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+
+
 
 @media (max-width: 768px) {
     .sidebar {
@@ -143,4 +227,82 @@ footer {
     .menu-toggle {
         display: block;
     }
+}
+.partidos-destacados {
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.partidos-destacados .title {
+    font-size: xxx-large;
+    color: white;
+}
+
+.partidos-destacados .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    width: 70%;
+    margin-left: 250px;
+}
+
+
+.partidos-destacados .section-title {
+    font-size: large;
+    margin-bottom: 20px;
+    color: white;
+}
+.table-header th {
+    background-color: #454545; 
+    color: #fff; 
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle}
+    .match-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    border: none; 
+    color: white;
+}
+
+th {
+    font-weight: bold;
+    color: white;
+}
+
+td img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.match-info {
+    margin-right: 20px;
+}
+
+.odds {
+    display: flex;
+    flex-direction: column;
+}
+
+.green-text{
+    color: greenyellow;
 }
