@@ -14,7 +14,7 @@ Sportify es una innovadora aplicación web diseñada para mejorar tu experiencia
 
 1. Clonar el repositorio en tu máquina local:
     ```sh
-    [https://github.com/fonsiii/sportify.git]
+    https://github.com/fonsiii/sportify.git
     ```
 2. Navegar al directorio del proyecto:
     ```sh
