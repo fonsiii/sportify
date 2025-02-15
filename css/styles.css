@@ -1,5 +1,7 @@
 :root {
     --gradient-bg: linear-gradient(90deg, #005440 0%, #00BA8E 100%);
+    --fondo-gris : url(../img/FondoGris.webp);
+
 }
 html, body {
     height: 100%;
@@ -39,13 +41,59 @@ html, body {
     margin-left: 10px; 
     margin-right: 10px; 
 }
-
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal {
+    background: var(--fondo-gris);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+    border: 2px solid #00ff99;
+    width: 350px;
+}
+.modal h2 {
+    color: white;
+    background: var(--gradient-bg);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
+.modal button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: var(--gradient-bg);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 .container {
     display: flex;
     flex-direction: column;
     width: 100%;
     flex: 1;
-    background-image: url(../img/FondoGris.webp);
+    background-image: var(--fondo-gris);
     background-repeat: no-repeat;
 }
 footer {

@@ -12,8 +12,26 @@
       <a class="home">SPORTIFY</a>
       <div class="icons">
         <img src="../ico/send.ico" alt="Send" />
-        <img src="../ico/user_add.ico" alt="User Add" />
+        <img id="openModalRegister" src="../ico/user_add.ico" alt="User Add" style="cursor: pointer;"/>
         <img src="../ico/user.ico" alt="User" />
+      </div>
+    </div>
+    <div class="modal-container" id="modalContainerRegister">
+      <div class="modal">
+        <h2>Registro</h2>
+        <input type="text" placeholder="Nombre">
+        <input type="text" placeholder="Apellidos">
+        <input type="email" placeholder="Correo electrónico">
+        <input type="date" placeholder="Fecha de nacimiento">
+        <button id="nextModal">Siguiente</button>
+      </div>
+    </div>
+    <div class="modal-container" id="modalContainerPassword">
+      <div class="modal">
+        <h2>Contraseña</h2>
+        <input type="password" name="password" id="password" placeholder="Contraseña: ">
+        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repita su contraseña:">
+        <button id="closeModal">Siguiente</button>
       </div>
     </div>
     <div class="container">
@@ -84,7 +102,6 @@
 
 </div>
 
-    </div>
     <footer>
       <div class="creative-commons">
         <img src="../ico/cc_by.ico" alt="By" />
@@ -96,5 +113,8 @@
         <img src="../ico/facebook.ico" alt="Facebook" />
       </div>
     </footer>
+
+
+    <script src="../js/app.js"></script>t
   </body>
 </html>
