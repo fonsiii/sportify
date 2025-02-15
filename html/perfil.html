@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Page</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="home" href="home.html"><img src="../ico/volver.ico"></a>
+        <div class="icons">
+          <img src="../ico/rank-bronce.ico" alt="Rank" />
+          <p class="saldo">Saldo: 0€</p>
+            <img src="../ico/notificaciones.ico" alt="notificaciones" id="openModalNotificaciones"/>
+        </div>
+      </div>
+      <div class="modal-container" id="modalContainerNotificaciones">
+        <div class="modal">
+          <h2>No hay notificaciones nuevas</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="profile">
+            <div class="avatar">
+                <img src="../ico/iconuser.ico" alt="Avatar">
+                <p>Username</p>
+            </div>
+            <div class="basic-info">
+                <h2 style="text-align: center;">Información básica</h2>
+                <p>Nombre completo:</p>
+                <p>Fecha de nacimiento:</p>
+                <p>Correo electrónico:</p>
+            </div>
+        </div>
+        <div class="history">
+            <h2>Historial de apuestas</h2>
+            <hr>
+            <p>No hay registros</p>
+        </div>
+        <div class="victories">
+            <h2>% de victorias:</h2>
+            <div class="circle">
+                <p>0%</p>
+            </div>
+        </div>
+      </div>
+  <script>
+document.getElementById("openModalNotificaciones").addEventListener("click", function() {
+    document.getElementById("modalContainerNotificaciones").style.display = "flex";
+    document.body.style.overflow = "hidden";
+});
+document.getElementById("modalContainerNotificaciones").addEventListener("click", function(event) {
+    if (event.target === this) {
+        document.getElementById("modalContainerNotificaciones").style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+});
+  </script>
+</body>
+</html>

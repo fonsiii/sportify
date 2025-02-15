@@ -33,13 +33,18 @@ html, body {
 }
 .navbar .icons {
     display: flex;
-    gap: 10px; 
+    gap: 10px;     
+    align-items: anchor-center;
 }
-.navbar .icons img {
+.navbar .icons img , .navbar .home img {
     width: 30px;
     height: 30px;
     margin-left: 10px; 
     margin-right: 10px; 
+}
+.saldo{
+    color: white;
+    font-size: x-large;
 }
 .modal-container {
     display: none;
@@ -69,6 +74,9 @@ html, body {
     border-radius: 5px;
     margin-bottom: 15px;
 }
+.modal p{
+    color: white;
+}
 .modal input {
     width: 100%;
     padding: 10px;
@@ -88,6 +96,13 @@ html, body {
     cursor: pointer;
     font-size: 16px;
 }
+.upload-box{
+    border: #282828 5px  dashed;
+    margin-bottom: 20px;
+}
+.upload-box img{
+    margin-top: 10px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -96,6 +111,7 @@ html, body {
     background-image: var(--fondo-gris);
     background-repeat: no-repeat;
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -119,6 +135,63 @@ footer {
     transform: translateX(-50%);
 }
 
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto 20px auto; 
+}
+
+.profile .avatar {
+    text-align: center;
+    margin-right: 100px; 
+}
+
+.profile .avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+hr {
+    width: 40%; 
+    border: 1px solid; 
+    margin: 10px 0; 
+    margin-left: 30%;
+}
+.profile p{
+    font-size: larger;
+}
+
+.profile .basic-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .basic-info h2 {
+    margin-top: 0;
+    font-size: xx-large;
+}
+
+.history, .victories {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.victories .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+}
 
 .creative-commons img {
     margin: 0 5px; 
