@@ -13,13 +13,13 @@ Sportify es una innovadora aplicación web diseñada para mejorar tu experiencia
 ## Instrucciones de Instalación y Uso
 
 1. Clonar el repositorio en tu máquina local:
-    ```sh
-    https://github.com/fonsiii/sportify.git
-    ```
+   ```sh
+   https://github.com/fonsiii/sportify.git
+   ```
 2. Navegar al directorio del proyecto:
-    ```sh
-    cd sportify
-    ```
+   ```sh
+   cd sportify
+   ```
 3. Abrir el archivo `index.html` en tu navegador web favorito para empezar.
 
 ## Uso
@@ -36,6 +36,11 @@ Este proyecto está licenciado bajo la [Licencia Creative Commons BY](https://cr
 ## Mejoras y Cambios en Cada Versión
 
 ### Versión 1.0.0
+
 - ** Diseño principal de lo que queremos implementar hecho con Figma.
 - ** Implementación de la página Home y la de perfil junto a las modales de registro y notificación.
+
+
+wachi wachi wa
+
 ---
