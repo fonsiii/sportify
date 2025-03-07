@@ -1,0 +1,197 @@
+/* ------------------ VARIABLES GLOBALES ------------------ */
+:root {
+  --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+}
+
+/* ------------------ REGLAS BASE ------------------ */
+html,
+body {
+  margin: 0;
+  flex-direction: column;
+}
+
+body {
+  margin-top: 70px;
+  background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ------------------ NAVBAR (CABECERA) ------------------ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: var(--gradient-bg);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2000;
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .icons i {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-left: 4%;
+}
+
+.home {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+}
+
+.home strong {
+  color: white;
+}
+
+/* ------------------ BOTÓN DE MENÚ ------------------ */
+.menu-toggle {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  z-index: 2100;
+}
+
+/* ------------------ SIDEBAR (MENÚ LATERAL) ------------------ */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: -250px;
+  width: 250px;
+  height: calc(100% - 70px);
+  background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1500;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color: white;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.sidebar div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sidebar img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--gradient-bg);
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+
+.creative-commons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 3%;
+}
+
+.creative-commons i {
+  font-size: 2rem;
+  margin: 0 5px;
+  color: white;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+  padding-right: 1%;
+}
+
+.social-networks i {
+  font-size: 1.5rem;
+  margin: 0 5px;
+  color: white;
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+    top: 70px;
+    height: calc(100% - 70px);
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .partidos-destacados .title {
+    font-size: 2rem;
+  }
+}

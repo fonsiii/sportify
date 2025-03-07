@@ -1,0 +1,296 @@
+/* ------------------ VARIABLES GLOBALES ------------------ */
+:root {
+  --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+}
+
+/* ------------------ ANIMACIONES ------------------ */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ REGLAS BASE ------------------ */
+body {
+  margin: 0;
+  padding-top: 70px;
+  background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: fadeIn 1s ease-out;
+}
+
+/* ------------------ NAVBAR (HEADER) ------------------ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: url('../img/fondos/fondoRojo.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2000;
+  border: 6px solid transparent;
+  border-image: url('../img/fondos/dorado.jpg') 20 round;
+  filter: brightness(1.2);
+  animation: slideDown 0.5s ease-out;
+}
+
+.atras {
+  background-color: transparent;
+  border: 3px solid transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: url('../img/fondos/dorado.jpg') repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.atras:hover {
+  filter: brightness(0.8);
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-right: 7%;
+}
+
+.home {
+  position: relative;
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.5rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  background: url('../img/fondos/dorado.jpg') repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.home:hover {
+  transform: scale(1.05);
+}
+
+.home::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: inherit;
+  color: #000;
+}
+
+/* ------------------ CONTENIDO MISIONES ------------------ */
+.misiones-main {
+  padding: 20px;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-out;
+}
+
+.mission-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mission-tab {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.mission-tab.active,
+.mission-tab:hover {
+  background: rgba(255, 217, 0, 0.733);
+  transform: scale(1.05);
+}
+
+.mission-section {
+  display: none;
+  margin-bottom: 40px;
+}
+
+.mission-section.active {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.mission-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: url('../img/fondos/dorado.jpg') repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.3s ease;
+  filter: brightness(1.4);
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: crosshair;
+}
+
+.mission-icon {
+  font-size: 2.5rem;
+  color: #FFD700;
+  transition: transform 0.3s ease;
+}
+
+
+.mission-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.mission-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.mission-progress {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* ------------------ FOOTER ------------------ */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #005440;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ------------------ POP-UP DE MISIÓN TRACKEADA ------------------ */
+.tracked-mission {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+  z-index: 2100;
+}
+
+.tracked-mission:hover {
+  width: 300px;
+  height: 80px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tracked-icon {
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracked-details {
+  display: none;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.tracked-mission:hover .tracked-details {
+  display: flex;
+}
+
+.tracked-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.tracked-details p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.untrack-btn {
+  align-self: flex-start;
+  margin-top: 5px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.untrack-btn:hover {
+  background: #0056b3;
+}

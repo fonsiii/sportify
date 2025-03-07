@@ -1,0 +1,283 @@
+@import url('index.css');
+
+/* ------------------ NAVBAR (CABECERA) ------------------ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  color: white;
+}
+
+.icon-rank {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: 4%;
+  transition: transform 0.3s ease;
+}
+
+.icon-rank:hover {
+  transform: scale(1.2);
+}
+
+.saldo {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.saldo:hover {
+  filter: brightness(0.9);
+}
+
+#openModalNotificaciones {
+  transition: transform 0.3s ease;
+}
+
+#openModalNotificaciones:hover {
+  filter: brightness(0.9);
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* MODALES */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  margin-top: 5%;
+  background: var(--fondo-gris);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+  border: 2px solid #00ff99;
+  width: 350px;
+}
+
+.modal h2 {
+  color: white;
+  background: var(--gradient-bg);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.modal-notificaciones {
+  position: relative;
+  height: 500px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-notificaciones::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/fondos/FondoGris.webp);
+  z-index: -2;
+}
+
+.modal-notificaciones::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/fondos/subwaysurfers.gif') no-repeat center center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* CABECERA DE PERFIL */
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  margin: 0 auto;
+}
+
+.username {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
+
+.bio {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.bio h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.social-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.social-stats .stat {
+  text-align: center;
+}
+
+.social-stats .stat h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+/* CONTENIDO DEL PERFIL */
+.profile-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.basic-info,
+.performance {
+  background: rgba(34, 34, 34, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  color: white;
+}
+
+.basic-info h2,
+.performance h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* VICTORIAS */
+.victories {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* HISTORIAL */
+.history hr {
+  border: 0;
+  height: 1px;
+  background: white;
+  margin: 10px 0;
+}
+
+/* BOTÓN ATRÁS */
+.atras {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.atras:hover {
+  filter: brightness(0.8);
+}
+
+.recent-posts {
+  background: rgba(34, 34, 34, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 30px;
+}
+
+.recent-posts .post {
+  border-bottom: 1px solid #555;
+  padding: 10px 0;
+}
+
+.recent-posts .post:last-child {
+  border-bottom: none;
+}
+
+.recent-posts .post-date {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.gallery {
+  background: rgba(34, 34, 34, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 30px;
+}
+
+.gallery .gallery-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery .gallery-images img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.stat-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.stat-link:hover {
+  background-color: white;
+  color: black;
+}

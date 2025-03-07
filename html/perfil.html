@@ -1,61 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Perfil Page</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <div class="navbar">
-        <a class="home" href="home.html"><img src="../ico/volver.ico"></a>
-        <div class="icons">
-          <img src="../ico/rank-bronce.ico" alt="Rank" />
-          <p class="saldo">Saldo: 0€</p>
-            <img src="../ico/notificaciones.ico" alt="notificaciones" id="openModalNotificaciones"/>
+    <link rel="stylesheet" href="../css/perfil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <button class="atras" onclick="window.location.href='./home.html'">
+        <i class="bi bi-arrow-left"></i> Atrás
+      </button>
+      <a class="home" href="home.html"></a>
+      <div class="icons">
+        <img
+          src="../ico/rank-bronce.ico"
+          alt="Rango Bronce"
+          class="icon-rank"
+          onclick="window.location.href='./rangos.html'"
+        />
+        <p class="saldo" id="openModalSaldo">Saldo: <span class="saldo-valor">0€</span></p>
+        <i
+          class="bi bi-bell"
+          id="openModalNotificaciones"
+          style="font-size: 1.5rem; color: white;"
+        ></i>
+      </div>
+    </nav>
+
+    <div class="modal-container" id="modalContainerNotificaciones">
+      <div class="modal modal-notificaciones">
+        <h2>No hay notificaciones nuevas</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="profile-header">
+        <div class="avatar">
+          <i class="bi bi-person-circle" style="font-size: 256px; color: black;"></i>
+        </div>
+        <p class="username">Username</p>
+        <div class="bio">
+          <h3>Biografía</h3>
+          <p>
+            He apostado la casa al madri
+          </p>
         </div>
       </div>
-      <div class="modal-container" id="modalContainerNotificaciones">
-        <div class="modal">
-          <h2>No hay notificaciones nuevas</h2>
-        </div>
+
+      <!-- Sección de estadísticas de red social con enlaces -->
+      <div class="social-stats">
+        <a href="./gente/amigos.html" class="stat-link">
+          <div class="stat">
+            <h4>Amigos</h4>
+            <p>3</p>
+          </div>
+        </a>
+        <a href="./gente/seguidores.html" class="stat-link">
+          <div class="stat">
+            <h4>Seguidores</h4>
+            <p>3</p>
+          </div>
+        </a>
+        <a href="./gente/siguiendo.html" class="stat-link">
+          <div class="stat">
+            <h4>Siguiendo</h4>
+            <p>3</p>
+          </div>
+        </a>
       </div>
-      <div class="container">
-        <div class="profile">
-            <div class="avatar">
-                <img src="../ico/iconuser.ico" alt="Avatar">
-                <p>Username</p>
-            </div>
-            <div class="basic-info">
-                <h2 style="text-align: center;">Información básica</h2>
-                <p>Nombre completo:</p>
-                <p>Fecha de nacimiento:</p>
-                <p>Correo electrónico:</p>
-            </div>
+
+      <!-- Contenido dividido en dos columnas -->
+      <div class="profile-content">
+        <div class="basic-info">
+          <h2>Información básica</h2>
+          <p>Nombre completo:</p>
+          <p>a</p>
+          <p>Fecha de nacimiento:</p>
+          <p>a</p>
+          <p>Correo electrónico:</p>
+          <p>a</p>
         </div>
-        <div class="history">
-            <h2>Historial de apuestas</h2>
-            <hr>
-            <p>No hay registros</p>
-        </div>
-        <div class="victories">
+        <div class="performance">
+          <div class="victories">
             <h2>% de victorias:</h2>
             <div class="circle">
-                <p>0%</p>
+              <div class="progress-circle">
+                <span>0%</span>
+              </div>
             </div>
+          </div>
+          <div class="history">
+            <h2>Historial de apuestas</h2>
+            <hr />
+            <p>No hay registros</p>
+          </div>
         </div>
       </div>
-  <script>
-document.getElementById("openModalNotificaciones").addEventListener("click", function() {
-    document.getElementById("modalContainerNotificaciones").style.display = "flex";
-    document.body.style.overflow = "hidden";
-});
-document.getElementById("modalContainerNotificaciones").addEventListener("click", function(event) {
-    if (event.target === this) {
-        document.getElementById("modalContainerNotificaciones").style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-});
-  </script>
-</body>
+
+      <!-- Publicaciones Recientes -->
+      <div class="recent-posts">
+        <h2>Publicaciones Recientes</h2>
+        <div class="post">
+          <p>¡Bienvenido a mi perfil!</p>
+          <span class="post-date">2025-03-05</span>
+        </div>
+        <div class="post">
+          <p>Me declaro en bancarrota.</p>
+          <span class="post-date">2025-03-04</span>
+        </div>
+      </div>
+
+      <!-- Galería de Fotos -->
+      <div class="gallery">
+        <h2>Galería de Fotos</h2>
+        <div class="gallery-images">
+          <img src="../img/perfiles/jagger.jpeg" alt="Foto 1" />
+          <img src="../img/perfiles/jagger.jpeg" alt="Foto 2" />
+          <img src="../img/perfiles/jagger.jpeg" alt="Foto 3" />
+        </div>
+      </div>
+    </div>
+    <script src="../js/perfil.js"></script>
+  </body>
 </html>

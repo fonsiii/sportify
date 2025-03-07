@@ -1,0 +1,167 @@
+:root {
+  --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+  --fondo-gris: #282828;
+}
+
+/* REGLAS BASE */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin-top: 70px;
+  background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: var(--gradient-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2000;
+}
+
+.home {
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+}
+
+.home strong {
+  color: white;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  z-index: 2100;
+}
+
+/* MODALES */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--fondo-gris);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+  border: 2px solid #00ff99;
+  width: 350px;
+}
+
+.modal h2 {
+  color: white;
+  background: var(--gradient-bg);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.modal p {
+  color: white;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+}
+
+.modal button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: var(--gradient-bg);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.upload-box img {
+  margin-top: 10px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  transform: scale(1.1);
+}
+
+.icon-stack {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 10px;
+}
+
+.icon-stack i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.icon-stack i.bi-plus-circle {
+  font-size: 1.5rem;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  top: auto;
+  color: #ffffff;
+}
+
+.next {
+  transition: transform 0.3s ease;
+}
+
+.next:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,262 @@
+/* ------------------ VARIABLES GLOBALES ------------------ */
+:root {
+    --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+  }
+  
+  /* ------------------ REGLAS BASE ------------------ */
+  body {
+    margin: 0;
+    padding-top: 70px;
+    background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /* ------------------ NAVBAR (HEADER) ------------------ */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: url('../img/fondos/fondoRangos.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 2000;
+    border: 6px solid transparent;
+    border-image: url('../img/fondos/plata.png') 20 round;
+    filter: brightness(1.2);
+  }
+  
+  .atras {
+    background-color: transparent;
+    border: 3px solid transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: url('../img/fondos/plata.png') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  
+  .navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 7%;
+  }
+  
+  .home {
+    position: relative;
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 2.5rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    background: url('../img/fondos/plata.png') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .home::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    color: #000;
+  }
+  
+  /* ------------------ Ícono de Misiones ------------------ */
+  .mission-icon {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    filter: brightness(1.4) saturate(1.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .mission-icon i {
+    font-size: 3rem;
+    background: url('../img/fondos/dorado.jpg') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .mission-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ------------------ Barra de XP ------------------ */
+  .xp-bar {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 400px;
+    height: 30px;
+    background-color: #ddd;
+    border: 2px solid #383838;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .xp-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #FFD700, #DAA520);
+    border-radius: 15px 0 0 15px;
+  }
+  
+  /* ------------------ Texto de XP Restante ------------------ */
+  .xp-remaining {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    width: 400px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background: url('../img/fondos/dorado.jpg') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 5px;
+    filter: brightness(1.4) saturate(1.2);
+  }
+  
+  /* ------------------ Carrusel ------------------ */
+  .carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 150px auto 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+    cursor: grab;
+  }
+  
+  .carousel.dragging {
+    cursor: grabbing;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .imagen-pequeña {
+    display: block;
+    width: 35% !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+  
+  .ficha-pequeña {
+    display: block;
+    width: 15% !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+  
+  .buy-pass-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  .buy-pass-btn {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .buy-pass-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .ranguito {
+    display: block;
+    width: 25% !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  .level-text1 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: url('../img/fondos/fondoBronce.jpg') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(1.4) saturate(1.2);
+  }
+
+  .level-text2 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: url('../img/fondos/plata.png') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(1.4) saturate(1.2);
+  }
+  .level-text3 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: url('../img/fondos/dorado.jpg') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(1.4) saturate(1.2);
+  }
+  .level-text4 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: url('../img/fondos/FondoazulTransparente.jpg') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(1.4) saturate(1.2);
+  }
+  .level-text5 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: url('../img/fondos/fondoDiamanteRosa.png') repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: brightness(1.4) saturate(1.2);
+  }

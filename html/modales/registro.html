@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../css/registro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>Registro - SPORTIFY</title>
+  </head>
+  <body class="same-bg">
+    <header class="navbar">
+      <button onclick="window.location.href='../home.html'" class="menu-toggle">
+        ← Volver
+      </button>
+      <a class="home" href="../home.html"><strong>SPORTIFY</strong></a>
+    </header>
+
+    <!-- Modales de Registro -->
+    <div
+      class="modal-container"
+      id="modalContainerRegister"
+      style="display: flex"
+    >
+      <div class="modal">
+        <h2>Registro</h2>
+        <input type="text" placeholder="Nombre" />
+        <input type="text" placeholder="Apellidos" />
+        <input type="email" placeholder="Correo electrónico" />
+        <input type="date" placeholder="Fecha de nacimiento" />
+        <button id="nextModalPassword" class="next">Siguiente</button>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modalContainerPassword">
+      <div class="modal">
+        <h2>Contraseña</h2>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Contraseña: "
+        />
+        <input
+          type="password"
+          name="repeatPassword"
+          id="repeatPassword"
+          placeholder="Repita su contraseña:"
+        />
+        <button id="nextModalDNI" class="next">Siguiente</button>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modalContainerDNI">
+      <div class="modal">
+        <h2>Identificación</h2>
+        <div class="upload-box">
+          <div class="icon-stack" class="next">
+            <i class="bi bi-card-image"></i>
+            <i class="bi bi-plus-circle"></i>
+          </div>
+          <p>Foto del DNI</p>
+        </div>
+        <button id="nextModalSelfie" class="next">Siguiente</button>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modalContainerSelfie">
+      <div class="modal">
+        <h2>Identificación</h2>
+        <div class="upload-box">
+          <div class="icon-stack">
+            <i class="bi bi-card-image"></i>
+            <i class="bi bi-plus-circle"></i>
+          </div>
+          <p>Selfie</p>
+        </div>
+        <button id="closeModal" class="next">Guardar</button>
+      </div>
+    </div>
+
+    <!-- Script de registro -->
+    <script src="../../js/registro.js"></script>
+  </body>
+</html>

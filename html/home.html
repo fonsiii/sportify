@@ -3,170 +3,341 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
-    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/pantallaCarga.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <title>SPORTIFY</title>
   </head>
   <body>
+    <div id="loading-screen">
+      <h2>Cargando...</h2>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Navbar / Header -->
     <div class="navbar">
-      <a class="home" href="#">SPORTIFY</a>
-      <div class="icons">
-        <img src="../ico/send.ico" alt="Send" />
-        <img id="openModalRegister" src="../ico/user_add.ico" alt="User Add" style="cursor: pointer;" />
-          <img src="../ico/user.ico" alt="User" id="userIcon" />
-      </div>
-    </div>
-    
-    <div class="modal-container" id="modalContainerRegister">
-      <div class="modal">
-        <h2>Registro</h2>
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Apellidos">
-        <input type="email" placeholder="Correo electrónico">
-        <input type="date" placeholder="Fecha de nacimiento">
-        <button id="nextModalPassword">Siguiente</button>
-      </div>
-    </div>
-    <div class="modal-container" id="modalContainerPassword">
-      <div class="modal">
-        <h2>Contraseña</h2>
-        <input type="password" name="password" id="password" placeholder="Contraseña: ">
-        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repita su contraseña:">
-        <button id="nextModalDNI">Siguiente</button>
-      </div>
-    </div>
-    <div class="modal-container" id="modalContainerDNI">
-      <div class="modal">
-        <h2>Identificación</h2>
-        <div class="upload-box">
-          <img src="../ico/upload.ico" alt="Upload">
-          <p>Foto del DNI</p>
-        </div>
-        <button id="nextModalSelfie">Siguiente</button>
-      </div>
-    </div>
-    <div class="modal-container" id="modalContainerSelfie">
-      <div class="modal">
-        <h2>Identificación</h2>
-        <div class="upload-box">
-          <img src="../ico/upload.ico" alt="Upload">
-          <p>Selfie</p>
-        </div>
-        <button id="closeModal">Guardar</button>
-      </div>
-    </div>
-    <div class="container">
       <button class="menu-toggle">☰ Menú</button>
-      <div class="sidebar">
-        <h2>A-Z</h2>
-        <div>
-          <img src="../ico/ajedrez.ico" alt="Chess" />
-          <a href="deportes/ajedrez.html">Ajedrez</a>
-        </div>
-        <div>
-          <img src="../ico/baloncesto.ico" alt="Basketball" />
-          <a href="deportes/baloncesto.html">Baloncesto</a>
-        </div>
-        <div>
-          <img src="../ico/beisbol.ico" alt="Baseball" />
-          <a href="deportes/beisbol.html">Beisbol</a>
-        </div>
-        <div>
-          <img src="../ico/boxeo.ico" alt="Boxing" />
-          <a href="deportes/boxeo.html">Boxeo</a>
-        </div>
-        <div>
-          <img src="../ico/futbol.ico" alt="Football" />
-          <a href="deportes/futbol.html">Fútbol</a>
-        </div>
-        <div>
-          <img src="../ico/hockey.ico" alt="Hockey" />
-          <a href="deportes/hockey.html">Hockey</a>
-        </div>
-        <div>
-          <img src="../ico/joan.ico" alt="Joan" />
-          <a href="deportes/joanPradells.html">Joan Pradells</a>
-        </div>
-        <div>
-          <img src="../ico/natacion.ico" alt="Swimming" />
-          <a href="deportes/natacion.html">Natación</a>
-        </div>
-        <div>
-          <img src="../ico/tenis.ico" alt="Tennis" />
-          <a href="deportes/rafaNadal.html">Rafa Nadal</a>
-        </div>
-        <div>
-          <img src="../ico/rugby.ico" alt="Rugby" />
-          <a href="deportes/rugby.html">Rugby</a>
-        </div>
+      <div class="navbar-center">
+        <a class="home"><strong>SPORTIFY</strong></a>
+      </div>
+      <div class="icons">
+        <i id="openModalRegister" class="bi bi-person-plus"></i>
+        <i id="userIcon" class="bi bi-person"></i>
       </div>
     </div>
-      <div class="ludopatia">
-        <button class="image-button">
-          <img src="../ico/battlepass.ico" alt="Icono Izquierda" class="icon-left">
-          <img src="../img/pass.png" alt="Botón Imagen" class="button-image">
-          <img src="../ico/vbucks.ico" alt="Icono Derecha" class="icon-right">
-          <span class="button-text">CAMINO DEL LUDÓPATA</span>
-        </button>
+
+    <!-- Sidebar desplegable -->
+    <div class="sidebar" id="sidebar">
+      <h2>A-Z</h2>
+      <div>
+        <img src="../ico/ajedrez.ico" alt="Chess" />
+        <a href="deportes/ajedrez.html">Ajedrez</a>
       </div>
+      <div>
+        <img src="../ico/baloncesto.ico" alt="Basketball" />
+        <a href="deportes/baloncesto.html">Baloncesto</a>
+      </div>
+      <div>
+        <img src="../ico/beisbol.ico" alt="Baseball" />
+        <a href="deportes/beisbol.html">Béisbol</a>
+      </div>
+      <div>
+        <img src="../ico/boxeo.ico" alt="Boxing" />
+        <a href="deportes/boxeo.html">Boxeo</a>
+      </div>
+      <div>
+        <img src="../ico/futbol.ico" alt="Football" />
+        <a href="deportes/futbol.html">Fútbol</a>
+      </div>
+      <div>
+        <img src="../ico/hockey.ico" alt="Hockey" />
+        <a href="deportes/hockey.html">Hockey</a>
+      </div>
+      <div>
+        <img src="../ico/joan.ico" alt="Joan" />
+        <a href="deportes/joanPradells.html">Joan Pradells</a>
+      </div>
+      <div>
+        <img src="../ico/natacion.ico" alt="Swimming" />
+        <a href="deportes/natacion.html">Natación</a>
+      </div>
+      <div>
+        <img src="../ico/tenis.ico" alt="Tennis" />
+        <a href="deportes/rafaNadal.html">Rafa Nadal</a>
+      </div>
+      <div>
+        <img src="../ico/rugby.ico" alt="Rugby" />
+        <a href="deportes/rugby.html">Rugby</a>
+      </div>
+    </div>
 
-<!-- Partidos destacados -->
-<div class="partidos-destacados">
-  <div class="title">Partidos destacados</div>
+    <!-- Battle Pass -->
+    <div class="ludopatia">
+      <button
+        class="image-button"
+        onclick="window.location.href='./battlePass/battlePass.html'"
+      >
+        <img
+          src="../ico/battlepass.ico"
+          alt="Icono Izquierda"
+          class="icon-left"
+        />
+        <img
+          src="../img/fondos/pass.png"
+          alt="Botón Imagen"
+          class="button-image"
+        />
+        <img src="../ico/vbucks.ico" alt="Icono Derecha" class="icon-right" />
+        <span class="button-text"><strong>CAMINO DEL LUDÓPATA</strong></span>
+      </button>
+    </div>
 
-  <!-- Ejemplo de partido de Fútbol -->
-  <div class="section">
-      <div class="section-title">Sábado, 8 de febrero - Fútbol</div>
-      <table class="match-table">
+    <!-- Partidos Destacados -->
+    <div class="partidos-destacados">
+      <div class="title">Partidos destacados</div>
+
+      <!-- PARTIDO 1: Fútbol (ya existente) -->
+      <div class="section">
+        <div class="section-title">Sábado, 8 de febrero - Fútbol</div>
+        <table class="match-table">
           <thead class="table-header">
-              <tr>
-                  <th>Equipo</th>
-                  <th>Hora</th>
-                  <th>1</th>
-                  <th>X</th>
-                  <th>2</th>
-                  <th>Goles Totales</th>
-                  <th>Doble Oportunidad</th>
-              </tr>
+            <tr>
+              <th>Equipo</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Goles Totales</th>
+              <th>Doble Oportunidad</th>
+            </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td><img src="../ico/real-madrid.ico" alt="Real Madrid"> Real Madrid</td>
-                  <td rowspan="2">21:00</td>
-                  <td rowspan="2" class="green-text">1.50</td>
-                  <td rowspan="2" class="green-text">4.20</td>
-                  <td rowspan="2" class="green-text">7</td>
-                  <td rowspan="2">
-                      <div>Más de: <span class="green-text">2.5</span></div>
-                      <div>Menos de: <span class="green-text">1.5</span></div>
-                  </td>
-                  <td rowspan="2">1X: <span class="green-text">1.20 </span> 12: <span class="green-text">1.25</span> X2: <span class="green-text">2</span></td>
-              </tr>
-              <tr>
-                  <td><img src="../ico/atletico-madrid.ico" alt="Atletico de Madrid"> Atletico de Madrid</td>
-              </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../ico/real-madrid.ico" alt="Real Madrid" />
+                  <span>Real Madrid</span>
+                </div>
+              </td>
+              <td rowspan="2">21:00</td>
+              <td rowspan="2" class="green-text">1.50</td>
+              <td rowspan="2" class="green-text">4.20</td>
+              <td rowspan="2" class="green-text">7</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">2.5</span></div>
+                <div>Menos de: <span class="green-text">1.5</span></div>
+              </td>
+              <td rowspan="2">
+                1X: <span class="green-text">1.20</span> | 12:
+                <span class="green-text">1.25</span> | X2:
+                <span class="green-text">2</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img
+                    src="../ico/atletico-madrid.ico"
+                    alt="Atlético de Madrid"
+                  />
+                  <span>Atlético de Madrid</span>
+                </div>
+              </td>
+            </tr>
           </tbody>
-      </table>
-  </div>
-</div>
-<!-- Fin Partidos destacados -->
+        </table>
+      </div>
 
+      <!-- PARTIDO 2: Baloncesto -->
+      <div class="section">
+        <div class="section-title">
+          Domingo, 9 de febrero - Baloncesto (NBA)
+        </div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Equipo</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Puntos Totales</th>
+              <th>Doble Oportunidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../ico/baloncesto.ico" alt="Lakers" />
+                  <span>Los Angeles Lakers</span>
+                </div>
+              </td>
+              <td rowspan="2">23:00</td>
+              <td rowspan="2" class="green-text">1.80</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.00</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">220.5</span></div>
+                <div>Menos de: <span class="green-text">220.5</span></div>
+              </td>
+              <td rowspan="2">
+                1X: <span class="green-text">1.40</span> | 12:
+                <span class="green-text">1.60</span> | X2:
+                <span class="green-text">1.90</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../ico/baloncesto.ico" alt="Celtics" />
+                  <span>Boston Celtics</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-</div>
+      <!-- PARTIDO 3: Boxeo -->
+      <div class="section">
+        <div class="section-title">Domingo, 9 de febrero - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../ico/boxeo.ico" alt="Canelo" />
+                  <span>Canelo Álvarez</span>
+                </div>
+              </td>
+              <td rowspan="2">02:00</td>
+              <td rowspan="2" class="green-text">1.60</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.10</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">7.5</span></div>
+                <div>Menos de: <span class="green-text">7.5</span></div>
+              </td>
+              <td rowspan="2">
+                1X: <span class="green-text">1.35</span> | 12:
+                <span class="green-text">1.50</span> | X2:
+                <span class="green-text">1.80</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../ico/boxeo.ico" alt="Golovkin" />
+                  <span>Gennady Golovkin</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
+    <!-- Footer -->
     <footer>
       <div class="creative-commons">
-        <img src="../ico/cc_by.ico" alt="By" />
-        <img src="../ico/cc.ico" alt="Creative Commons" />
+        <i class="fab fa-creative-commons text-white fs-3 me-3"></i>
+        <i class="fab fa-creative-commons-by text-white fs-3"></i>
       </div>
       <div class="social-networks">
-        <img src="../ico/twitter.ico" alt="Twitter" />
-        <img src="../ico/instagram.ico" alt="Instagram" />
-        <img src="../ico/facebook.ico" alt="Facebook" />
+        <i class="bi bi-twitter" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-instagram" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-facebook" style="font-size: 1.5rem; color: white"></i>
       </div>
     </footer>
 
+    <!-- Chatbot Popup -->
+    <div
+      id="chatbotIcon"
+      class="fixed bottom-20 right-5 w-[60px] h-[60px] flex items-center justify-center cursor-pointer rounded-full"
+      style="
+        background: var(--gradient-bg);
+        z-index: 3000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      "
+    >
+      <i class="fas fa-comment text-white text-[1.5rem]"></i>
+    </div>
 
-    <script src="../js/app.js"></script>t
+    <div
+      id="chatbotInterface"
+      class="fixed bottom-20 right-5 w-[300px] h-[400px] bg-white border border-gray-300 rounded-[10px] shadow-md opacity-0 pointer-events-none origin-bottom-right transition-all duration-300 ease-in-out"
+      style="transform: scale(0.8); z-index: 3100"
+    >
+      <div
+        class="flex justify-between items-center rounded-t-[10px] p-[10px]"
+        style="background: var(--gradient-bg)"
+      >
+        <span class="text-white">Maldini</span>
+        <button
+          id="closeChatbot"
+          class="bg-transparent border-0 text-white text-[1.2rem] cursor-pointer"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="p-[10px] overflow-y-auto" style="height: calc(100% - 50px)">
+        <div
+          id="chatMessages"
+          class="flex flex-col gap-2 p-[10px]"
+          style="height: calc(100% - 60px)"
+        >
+        </div>
+        <form id="chatForm" class="flex border-t border-gray-300">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Escribe un mensaje..."
+            required
+            class="flex-1 border-0 p-2 text-base focus:outline-none"
+          />
+          <button
+            type="submit"
+            class="border-0"
+            style="
+              background: var(--gradient-bg);
+              color: white;
+              padding: 8px 12px;
+              cursor: pointer;
+              transition: background 0.3s ease;
+            "
+            onmouseover="this.style.background='#00765a'"
+            onmouseout="this.style.background='var(--gradient-bg)'"
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/home.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/pantallaCarga.js"></script>
   </body>
 </html>
