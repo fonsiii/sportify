@@ -43,10 +43,10 @@ Este proyecto está licenciado bajo la [Licencia Creative Commons BY](https://cr
 
 ### Versión 1
 
-Implementación del resto de páginas implementadas en Figma.
- Sección de red social para poder postear y agregar a tus amigos.
- Interfaz Chatbot Maldini
- Animaciones:  
+-Implementación del resto de páginas implementadas en Figma.
+-Sección de red social para poder postear y agregar a tus amigos.
+-Interfaz Chatbot Maldini
+-Animaciones:  
  1.Transición suave en botones: Cuando el usuario pase el mouse sobre un botón, debe cambiar de color
 con una transición de 0.3s.  
 2.Efecto hover en tarjetas de apuestas: Las tarjetas donde se muestran las apuestas deben elevarse
