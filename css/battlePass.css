@@ -1,0 +1,372 @@
+/* ------------------ VARIABLES GLOBALES ------------------ */
+:root {
+  --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+}
+
+/* ------------------ REGLAS BASE ------------------ */
+body {
+  margin: 0;
+  padding-top: 70px;
+  background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ------------------ NAVBAR (HEADER) ------------------ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: url('../img/fondos/fondoRojo.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2000;
+  border: 6px solid transparent;
+  border-image: url('../img/fondos/dorado.jpg') 20 round;
+  filter: brightness(1.2);
+}
+
+.atras {
+  background-color: transparent;
+  border: 3px solid transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: url('../img/fondos/dorado.jpg') repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.atras:hover {
+  filter: brightness(0.8);
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-right: 7%;
+}
+
+.home {
+  position: relative;
+  text-align: center;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.5rem;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  background: url('../img/fondos/dorado.jpg') repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.home::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: inherit;
+  color: #000;
+}
+
+/* ------------------ Ícono de Misiones ------------------ */
+.mission-icon {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.mission-icon i {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #FFD700, #DAA520);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+}
+
+.mission-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 16px rgba(255, 215, 0, 1));
+}
+
+/* ------------------ Contenedor Decorado de Barra de XP ------------------ */
+.xp-bar {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 400px;
+  height: 30px;
+  background: #1a1a1a;
+  border: 2px solid #444;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8), 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------ Subdivisiones de la Barra (Segmentos) ------------------ */
+.xp-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent calc(40px - 1px),
+    rgba(255,215,0,0.3) calc(40px - 1px),
+    rgba(255,215,0,0.3) 40px
+  );
+  pointer-events: none;
+}
+
+/* ------------------ Relleno de XP Animado y Decorado ------------------ */
+.xp-bar-fill {
+  height: 100%;
+  width: var(--xp-fill-width, 70%);
+  background: linear-gradient(90deg, #FFD700, rgb(218, 165, 32));
+  border-radius: 15px 0 0 15px;
+  box-shadow: inset 0 0 8px rgba(255,215,0,0.7);
+  position: relative;
+  overflow: hidden;
+  animation: xpFill 1.5s ease-out forwards;
+  transition: width 1s ease-in-out;
+}
+
+/* ------------------ Efecto de Brillo en el Relleno ------------------ */
+.xp-bar-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-25deg);
+  animation: shine 2s linear infinite;
+}
+
+/* ------------------ Animaciones ------------------ */
+@keyframes xpFill {
+  from { width: 0; }
+  to { width: var(--xp-fill-width, 70%); }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* ------------------ Texto Decorativo de XP Restante con Animación ------------------ */
+.xp-remaining {
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  width: 400px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin-top: 5px;
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5), 0 0 12px rgba(255, 215, 0, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(255, 215, 0, 1), 0 0 20px rgba(255, 215, 0, 1);
+    transform: scale(1.05);
+  }
+}
+
+/* ------------------ Carrusel ------------------ */
+.carousel-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 150px auto 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+.carousel.dragging {
+  cursor: grabbing;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.level-text {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: url('../img/fondos/dorado.jpg') repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(1.4) saturate(1.2);
+}
+
+.imagen-pequeña {
+  display: block;
+  width: 35% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+.ficha-pequeña {
+  display: block;
+  width: 15% !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+.buy-pass-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.buy-pass-btn {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.buy-pass-btn:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  background-size: 200% 200%;
+  animation: gradientShift 20s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.modal-content {
+  animation: modalEntrance 0.5s ease-out forwards;
+}
+@keyframes modalEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.option-container {
+  perspective: 1000px;
+  transition: transform 0.6s;
+}
+.option-container:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+.carousel-item {
+  animation: floatEffect 4s ease-in-out infinite;
+}
+
+@keyframes floatEffect {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.level-text {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+}
+
+.level-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 2s infinite;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.home {
+  text-shadow: 0 0 5px rgba(255,215,0,0.8);
+  animation: neonPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from { text-shadow: 0 0 5px rgba(255,215,0,0.8); }
+  to { text-shadow: 0 0 20px rgba(255,215,0,1); }
+}
+
+@keyframes bounceComplex {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.1) translateY(-10px); }
+  50% { transform: scale(0.95) translateY(5px); }
+  70% { transform: scale(1.05) translateY(-5px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+
+@keyframes rotateIconAdvanced {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}

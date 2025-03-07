@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../css/deportes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>SPORTIFY - Boxeo</title>
+  </head>
+  <body>
+    <!-- Navbar / Header -->
+    <div class="navbar">
+      <button class="menu-toggle">☰ Menú</button>
+      <div class="navbar-center">
+        <a class="home" href="../home.html"><strong>SPORTIFY</strong></a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <h2>A-Z</h2>
+      <div>
+        <img src="../../ico/ajedrez.ico" alt="Ajedrez" />
+        <a href="./ajedrez.html">Ajedrez</a>
+      </div>
+      <div>
+        <img src="../../ico/baloncesto.ico" alt="Baloncesto" />
+        <a href="./baloncesto.html">Baloncesto</a>
+      </div>
+      <div>
+        <img src="../../ico/beisbol.ico" alt="Béisbol" />
+        <a href="./beisbol.html">Béisbol</a>
+      </div>
+      <div>
+        <img src="../../ico/boxeo.ico" alt="Boxeo" />
+        <a>Boxeo</a>
+      </div>
+      <div>
+        <img src="../../ico/futbol.ico" alt="Fútbol" />
+        <a href="./futbol.html">Fútbol</a>
+      </div>
+      <div>
+        <img src="../../ico/hockey.ico" alt="Hockey" />
+        <a href="./hockey.html">Hockey</a>
+      </div>
+      <div>
+        <img src="../../ico/joan.ico" alt="Joan" />
+        <a href="./joanPradells.html">Joan Pradells</a>
+      </div>
+      <div>
+        <img src="../../ico/natacion.ico" alt="Natación" />
+        <a href="./natacion.html">Natación</a>
+      </div>
+      <div>
+        <img src="../../ico/tenis.ico" alt="Tenis" />
+        <a href="./rafaNadal.html">Rafa Nadal</a>
+      </div>
+      <div>
+        <img src="../../ico/rugby.ico" alt="Rugby" />
+        <a href="./rugby.html">Rugby</a>
+      </div>
+    </div>
+
+    <!-- Próximos Partidos -->
+    <div class="partidos-destacados">
+      <div class="title">Próximos Partidos</div>
+
+      <!-- Partido 1 -->
+      <div class="section">
+        <div class="section-title">Lunes, 10 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Canelo Álvarez" />
+                  <span>Canelo Álvarez</span>
+                </div>
+              </td>
+              <td rowspan="2">18:00</td>
+              <td rowspan="2" class="green-text">1.60</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.10</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">7.5</span></div>
+                <div>Menos de: <span class="green-text">7.5</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.35</span></div>
+                <div>12: <span class="green-text">1.50</span></div>
+                <div>X2: <span class="green-text">1.80</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Gennady Golovkin" />
+                  <span>Gennady Golovkin</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 2 -->
+      <div class="section">
+        <div class="section-title">Martes, 11 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Tyson Fury" />
+                  <span>Tyson Fury</span>
+                </div>
+              </td>
+              <td rowspan="2">20:00</td>
+              <td rowspan="2" class="green-text">1.70</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.20</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">10.5</span></div>
+                <div>Menos de: <span class="green-text">10.5</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.40</span></div>
+                <div>12: <span class="green-text">1.55</span></div>
+                <div>X2: <span class="green-text">1.85</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Deontay Wilder" />
+                  <span>Deontay Wilder</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 3 -->
+      <div class="section">
+        <div class="section-title">Miércoles, 12 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Anthony Joshua" />
+                  <span>Anthony Joshua</span>
+                </div>
+              </td>
+              <td rowspan="2">16:30</td>
+              <td rowspan="2" class="green-text">1.75</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.15</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">8.0</span></div>
+                <div>Menos de: <span class="green-text">8.0</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.38</span></div>
+                <div>12: <span class="green-text">1.52</span></div>
+                <div>X2: <span class="green-text">1.82</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Oleksandr Usyk" />
+                  <span>Oleksandr Usyk</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 4 -->
+      <div class="section">
+        <div class="section-title">Jueves, 13 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Errol Spence" />
+                  <span>Errol Spence</span>
+                </div>
+              </td>
+              <td rowspan="2">19:30</td>
+              <td rowspan="2" class="green-text">1.68</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.05</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">9.0</span></div>
+                <div>Menos de: <span class="green-text">9.0</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.32</span></div>
+                <div>12: <span class="green-text">1.47</span></div>
+                <div>X2: <span class="green-text">1.77</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Terence Crawford" />
+                  <span>Terence Crawford</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 5 -->
+      <div class="section">
+        <div class="section-title">Viernes, 14 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Shakur Stevenson" />
+                  <span>Shakur Stevenson</span>
+                </div>
+              </td>
+              <td rowspan="2">21:00</td>
+              <td rowspan="2" class="green-text">1.65</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.05</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">7.0</span></div>
+                <div>Menos de: <span class="green-text">7.0</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.30</span></div>
+                <div>12: <span class="green-text">1.45</span></div>
+                <div>X2: <span class="green-text">1.75</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Jermell Charlo" />
+                  <span>Jermell Charlo</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 6 -->
+      <div class="section">
+        <div class="section-title">Sábado, 15 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Manny Pacquiao" />
+                  <span>Manny Pacquiao</span>
+                </div>
+              </td>
+              <td rowspan="2">17:00</td>
+              <td rowspan="2" class="green-text">1.72</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.00</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">8.0</span></div>
+                <div>Menos de: <span class="green-text">8.0</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.36</span></div>
+                <div>12: <span class="green-text">1.50</span></div>
+                <div>X2: <span class="green-text">1.80</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Manny Pacquiao" />
+                  <span>Oponente</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 7 -->
+      <div class="section">
+        <div class="section-title">Domingo, 16 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Errol Spence Jr." />
+                  <span>Errol Spence Jr.</span>
+                </div>
+              </td>
+              <td rowspan="2">18:30</td>
+              <td rowspan="2" class="green-text">1.68</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.08</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">9.5</span></div>
+                <div>Menos de: <span class="green-text">9.5</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.34</span></div>
+                <div>12: <span class="green-text">1.48</span></div>
+                <div>X2: <span class="green-text">1.78</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Shakur Stevenson" />
+                  <span>Shakur Stevenson</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 8 -->
+      <div class="section">
+        <div class="section-title">Lunes, 17 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Anthony Joshua" />
+                  <span>Anthony Joshua</span>
+                </div>
+              </td>
+              <td rowspan="2">20:30</td>
+              <td rowspan="2" class="green-text">1.70</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.10</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">8.5</span></div>
+                <div>Menos de: <span class="green-text">8.5</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.37</span></div>
+                <div>12: <span class="green-text">1.51</span></div>
+                <div>X2: <span class="green-text">1.81</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Oleksandr Usyk" />
+                  <span>Oleksandr Usyk</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 9 -->
+      <div class="section">
+        <div class="section-title">Martes, 18 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Tyson Fury" />
+                  <span>Tyson Fury</span>
+                </div>
+              </td>
+              <td rowspan="2">22:00</td>
+              <td rowspan="2" class="green-text">1.75</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.15</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">10.0</span></div>
+                <div>Menos de: <span class="green-text">10.0</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.39</span></div>
+                <div>12: <span class="green-text">1.53</span></div>
+                <div>X2: <span class="green-text">1.83</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Deontay Wilder" />
+                  <span>Deontay Wilder</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 10 -->
+      <div class="section">
+        <div class="section-title">Miércoles, 19 de marzo - Boxeo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Boxeador</th>
+              <th>Hora</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Rounds Totales</th>
+              <th>Apuesta Doble</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Shakur Stevenson" />
+                  <span>Shakur Stevenson</span>
+                </div>
+              </td>
+              <td rowspan="2">23:00</td>
+              <td rowspan="2" class="green-text">1.68</td>
+              <td rowspan="2" class="green-text">--</td>
+              <td rowspan="2" class="green-text">2.12</td>
+              <td rowspan="2">
+                <div>Más de: <span class="green-text">9.0</span></div>
+                <div>Menos de: <span class="green-text">9.0</span></div>
+              </td>
+              <td rowspan="2">
+                <div>1X: <span class="green-text">1.33</span></div>
+                <div>12: <span class="green-text">1.48</span></div>
+                <div>X2: <span class="green-text">1.78</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/boxeo.ico" alt="Terence Crawford" />
+                  <span>Terence Crawford</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="creative-commons">
+        <i class="fab fa-creative-commons text-white fs-3 me-3"></i>
+        <i class="fab fa-creative-commons-by text-white fs-3"></i>
+      </div>
+      <div class="social-networks">
+        <i class="bi bi-twitter" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-instagram" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-facebook" style="font-size: 1.5rem; color: white"></i>
+      </div>
+    </footer>
+
+    <script src="../../js/menu.js"></script>
+  </body>
+</html>

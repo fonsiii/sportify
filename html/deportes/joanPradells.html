@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../css/deportes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>SPORTIFY - Joan Pradells</title>
+  </head>
+  <body>
+    <!-- Navbar / Header -->
+    <div class="navbar">
+      <button class="menu-toggle">☰ Menú</button>
+      <div class="navbar-center">
+        <a class="home" href="../home.html"><strong>SPORTIFY</strong></a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <h2>A-Z</h2>
+      <div>
+        <img src="../../ico/ajedrez.ico" alt="Ajedrez" />
+        <a href="./ajedrez.html">Ajedrez</a>
+      </div>
+      <div>
+        <img src="../../ico/baloncesto.ico" alt="Baloncesto" />
+        <a href="./baloncesto.html">Baloncesto</a>
+      </div>
+      <div>
+        <img src="../../ico/beisbol.ico" alt="Béisbol" />
+        <a href="./beisbol.html">Béisbol</a>
+      </div>
+      <div>
+        <img src="../../ico/boxeo.ico" alt="Boxeo" />
+        <a href="./boxeo.html">Boxeo</a>
+      </div>
+      <div>
+        <img src="../../ico/futbol.ico" alt="Fútbol" />
+        <a href="./futbol.html">Fútbol</a>
+      </div>
+      <div>
+        <img src="../../ico/hockey.ico" alt="Hockey" />
+        <a href="./hockey.html">Hockey</a>
+      </div>
+      <div>
+        <img src="../../ico/joan.ico" alt="Joan Pradells" />
+        <a>Joan Pradells</a>
+      </div>
+      <div>
+        <img src="../../ico/natacion.ico" alt="Natación" />
+        <a href="./natacion.html">Natación</a>
+      </div>
+      <div>
+        <img src="../../ico/tenis.ico" alt="Tenis" />
+        <a href="./rafaNadal.html">Rafa Nadal</a>
+      </div>
+      <div>
+        <img src="../../ico/rugby.ico" alt="Rugby" />
+        <a href="./rugby.html">Rugby</a>
+      </div>
+    </div>
+
+    <!-- Próximas Competencias -->
+    <div class="partidos-destacados">
+      <div class="title">Próximas Competencias</div>
+
+      <!-- Competencia 1 -->
+      <div class="section">
+        <div class="section-title">Lunes, 10 de marzo - Powerlifting</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Competidor</th>
+              <th>Hora</th>
+              <th>Culturismo</th>
+              <th>Powerlifting</th>
+              <th>Total Puntos</th>
+              <th>Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Juan Pérez" />
+                  <span>Juan Pérez</span>
+                </div>
+              </td>
+              <td rowspan="2">18:00</td>
+              <td rowspan="2" class="green-text">1.80</td>
+              <td rowspan="2" class="green-text">2.10</td>
+              <td rowspan="2" class="green-text">3.50</td>
+              <td rowspan="2">
+                <div>Bonus: <span class="green-text">+0.5</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Carlos Ruiz" />
+                  <span>Carlos Ruiz</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Competencia 2 -->
+      <div class="section">
+        <div class="section-title">Martes, 11 de marzo - Culturismo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Competidor</th>
+              <th>Hora</th>
+              <th>Culturismo</th>
+              <th>Powerlifting</th>
+              <th>Total Puntos</th>
+              <th>Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Miguel Sánchez" />
+                  <span>Miguel Sánchez</span>
+                </div>
+              </td>
+              <td rowspan="2">20:00</td>
+              <td rowspan="2" class="green-text">1.90</td>
+              <td rowspan="2" class="green-text">2.00</td>
+              <td rowspan="2" class="green-text">3.80</td>
+              <td rowspan="2">
+                <div>Bonus: <span class="green-text">+0.7</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Andrés López" />
+                  <span>Andrés López</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Competencia 3 -->
+      <div class="section">
+        <div class="section-title">Miércoles, 12 de marzo - Powerlifting</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Competidor</th>
+              <th>Hora</th>
+              <th>Culturismo</th>
+              <th>Powerlifting</th>
+              <th>Total Puntos</th>
+              <th>Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Raúl Gómez" />
+                  <span>Raúl Gómez</span>
+                </div>
+              </td>
+              <td rowspan="2">16:30</td>
+              <td rowspan="2" class="green-text">1.85</td>
+              <td rowspan="2" class="green-text">2.05</td>
+              <td rowspan="2" class="green-text">3.70</td>
+              <td rowspan="2">
+                <div>Bonus: <span class="green-text">+0.6</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Fernando Díaz" />
+                  <span>Fernando Díaz</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Competencia 4 -->
+      <div class="section">
+        <div class="section-title">Jueves, 13 de marzo - Powerlifting</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Competidor</th>
+              <th>Hora</th>
+              <th>Culturismo</th>
+              <th>Powerlifting</th>
+              <th>Total Puntos</th>
+              <th>Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Roberto Díaz" />
+                  <span>Roberto Díaz</span>
+                </div>
+              </td>
+              <td rowspan="2">14:00</td>
+              <td rowspan="2" class="green-text">1.88</td>
+              <td rowspan="2" class="green-text">2.10</td>
+              <td rowspan="2" class="green-text">3.90</td>
+              <td rowspan="2">
+                <div>Bonus: <span class="green-text">+0.8</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Esteban López" />
+                  <span>Esteban López</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Competencia 5 -->
+      <div class="section">
+        <div class="section-title">Viernes, 14 de marzo - Culturismo</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Competidor</th>
+              <th>Hora</th>
+              <th>Culturismo</th>
+              <th>Powerlifting</th>
+              <th>Total Puntos</th>
+              <th>Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Alejandro Torres" />
+                  <span>Alejandro Torres</span>
+                </div>
+              </td>
+              <td rowspan="2">15:30</td>
+              <td rowspan="2" class="green-text">1.92</td>
+              <td rowspan="2" class="green-text">2.00</td>
+              <td rowspan="2" class="green-text">4.00</td>
+              <td rowspan="2">
+                <div>Bonus: <span class="green-text">+0.9</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/joan.ico" alt="Sergio Martínez" />
+                  <span>Sergio Martínez</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="creative-commons">
+        <i class="fab fa-creative-commons text-white fs-3 me-3"></i>
+        <i class="fab fa-creative-commons-by text-white fs-3"></i>
+      </div>
+      <div class="social-networks">
+        <i class="bi bi-twitter" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-instagram" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-facebook" style="font-size: 1.5rem; color: white"></i>
+      </div>
+    </footer>
+
+    <script src="../../js/menu.js"></script>
+  </body>
+</html>

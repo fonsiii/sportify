@@ -1,0 +1,36 @@
+:root {
+    --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+  }
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  #progress-container {
+    width: 300px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  #progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--gradient-bg);
+    border-radius: 10px;
+    transition: width 50ms linear;
+  }
+  
+  

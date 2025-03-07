@@ -3,50 +3,510 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>SPORTIFY</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../css/deportes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>SPORTIFY - Ajedrez</title>
   </head>
   <body>
+    <!-- Navbar / Header  -->
     <div class="navbar">
-      <a class="home" href="#">SPORTIFY</a>
-      <div class="icons">
-        <img src="../ico/send.ico" alt="Send" />
-        <img id="openModalRegister" src="../ico/user_add.ico" alt="User Add" style="cursor: pointer;" />
-          <img src="../ico/user.ico" alt="User" id="userIcon" />
+      <button class="menu-toggle">☰ Menú</button>
+      <div class="navbar-center">
+        <a class="home"  href="../home.html"><strong>SPORTIFY</strong></a>
       </div>
     </div>
-    <div class="container">
-      <button class="menu-toggle">☰ Menú</button>
-      <div class="sidebar">
-        <h2>A-Z</h2>
-        <div><img src="../ico/ajedrez.ico" alt="Chess"/><a href="#">Ajedrez</a></div>
-        <div><img src="../ico/baloncesto.ico" alt="Basketball"/><a href="#">Baloncesto</a></div>
-        <div><img src="../ico/beisbol.ico" alt="Baseball"/><a href="#">Beisbol</a></div>
-        <div><img src="../ico/boxeo.ico" alt="Boxing"/><a href="#">Boxeo</a></div>
-        <div><img src="../ico/futbol.ico" alt="Football"/><a href="#">Fútbol</a></div>
-        <div><img src="../ico/hockey.ico" alt="Hockey"/><a href="#">Hockey</a></div>
-        <div><img src="../ico/joan.ico" alt="Joan"/><a href="#">Joan Pradells</a></div>
-        <div><img src="../ico/natacion.ico" alt="Swimming"/><a href="#">Natación</a></div>
-        <div><img src="../ico/tenis.ico" alt="Tennis"/><a href="#">Rafa Nadal</a></div>
-        <div><img src="../ico/rugby.ico" alt="Rugby"/><a href="#">Rugby</a></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <h2>A-Z</h2>
+      <div>
+        <img src="../../ico/ajedrez.ico" alt="Ajedrez" />
+        <a>Ajedrez</a>
+      </div>
+      <div>
+        <img src="../../ico/baloncesto.ico" alt="Baloncesto" />
+        <a href="./baloncesto.html">Baloncesto</a>
+      </div>
+      <div>
+        <img src="../../ico/beisbol.ico" alt="Béisbol" />
+        <a href="./beisbol.html">Béisbol</a>
+      </div>
+      <div>
+        <img src="../../ico/boxeo.ico" alt="Boxeo" />
+        <a href="./boxeo.html">Boxeo</a>
+      </div>
+      <div>
+        <img src="../../ico/futbol.ico" alt="Fútbol" />
+        <a href="./futbol.html">Fútbol</a>
+      </div>
+      <div>
+        <img src="../../ico/hockey.ico" alt="Hockey" />
+        <a href="./hockey.html">Hockey</a>
+      </div>
+      <div>
+        <img src="../../ico/joan.ico" alt="Joan" />
+        <a href="./joanPradells.html">Joan Pradells</a>
+      </div>
+      <div>
+        <img src="../../ico/natacion.ico" alt="Natación" />
+        <a href="./natacion.html">Natación</a>
+      </div>
+      <div>
+        <img src="../../ico/tenis.ico" alt="Tenis" />
+        <a href="./rafaNadal.html">Rafa Nadal</a>
+      </div>
+      <div>
+        <img src="../../ico/rugby.ico" alt="Rugby" />
+        <a href="./rugby.html">Rugby</a>
+      </div>
+    </div>
+
+    <!-- Próximos Partidos -->
+    <div class="partidos-destacados">
+      <div class="title">Próximos Partidos</div>
+
+      <!-- Partido 1 -->
+      <div class="section">
+        <div class="section-title">Lunes, 10 de marzo - Ajedrez Clásico</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Magnus Carlsen" />
+                  <span>Magnus Carlsen</span>
+                </div>
+              </td>
+              <td rowspan="2">18:00</td>
+              <td rowspan="2" class="green-text">1.85</td>
+              <td rowspan="2" class="green-text">3.20</td>
+              <td rowspan="2" class="green-text">2.10</td>
+              <td rowspan="2">
+                <div>Balance material: <span class="green-text">±0.5</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Ian Nepomniachtchi" />
+                  <span>Ian Nepomniachtchi</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-</div>
+      <!-- Partido 2 -->
+      <div class="section">
+        <div class="section-title">Martes, 11 de marzo - Ajedrez Rápido</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Fabiano Caruana" />
+                  <span>Fabiano Caruana</span>
+                </div>
+              </td>
+              <td rowspan="2">20:00</td>
+              <td rowspan="2" class="green-text">1.95</td>
+              <td rowspan="2" class="green-text">3.50</td>
+              <td rowspan="2" class="green-text">2.00</td>
+              <td rowspan="2">
+                <div>Tempo extra: <span class="green-text">Sí</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Ding Liren" />
+                  <span>Ding Liren</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <!-- Partido 3 -->
+      <div class="section">
+        <div class="section-title">Miércoles, 12 de marzo - Ajedrez Clásico</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Levon Aronian" />
+                  <span>Levon Aronian</span>
+                </div>
+              </td>
+              <td rowspan="2">16:00</td>
+              <td rowspan="2" class="green-text">1.90</td>
+              <td rowspan="2" class="green-text">3.30</td>
+              <td rowspan="2" class="green-text">2.05</td>
+              <td rowspan="2">
+                <div>Apertura: <span class="green-text">Ruy López</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Viswanathan Anand" />
+                  <span>Viswanathan Anand</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 4 -->
+      <div class="section">
+        <div class="section-title">Jueves, 13 de marzo - Ajedrez Rápido</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Wesley So" />
+                  <span>Wesley So</span>
+                </div>
+              </td>
+              <td rowspan="2">19:30</td>
+              <td rowspan="2" class="green-text">1.80</td>
+              <td rowspan="2" class="green-text">3.10</td>
+              <td rowspan="2" class="green-text">2.20</td>
+              <td rowspan="2">
+                <div>Defensa: <span class="green-text">Siciliana</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Anish Giri" />
+                  <span>Anish Giri</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 5 -->
+      <div class="section">
+        <div class="section-title">Viernes, 14 de marzo - Ajedrez Clásico</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Hikaru Nakamura" />
+                  <span>Hikaru Nakamura</span>
+                </div>
+              </td>
+              <td rowspan="2">21:00</td>
+              <td rowspan="2" class="green-text">1.70</td>
+              <td rowspan="2" class="green-text">3.00</td>
+              <td rowspan="2" class="green-text">2.30</td>
+              <td rowspan="2">
+                <div>Variante: <span class="green-text">Najdorf</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Teimour Radjabov" />
+                  <span>Teimour Radjabov</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 6 -->
+      <div class="section">
+        <div class="section-title">Sábado, 15 de marzo - Ajedrez Clásico</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Sergey Karjakin" />
+                  <span>Sergey Karjakin</span>
+                </div>
+              </td>
+              <td rowspan="2">17:00</td>
+              <td rowspan="2" class="green-text">1.88</td>
+              <td rowspan="2" class="green-text">3.25</td>
+              <td rowspan="2" class="green-text">2.15</td>
+              <td rowspan="2">
+                <div>Defensa: <span class="green-text">Grünfeld</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Shakhriyar Mamedyarov" />
+                  <span>Shakhriyar Mamedyarov</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 7 -->
+      <div class="section">
+        <div class="section-title">Domingo, 16 de marzo - Ajedrez Rápido</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Maxime Vachier-Lagrave" />
+                  <span>Maxime Vachier-Lagrave</span>
+                </div>
+              </td>
+              <td rowspan="2">18:30</td>
+              <td rowspan="2" class="green-text">1.82</td>
+              <td rowspan="2" class="green-text">3.22</td>
+              <td rowspan="2" class="green-text">2.12</td>
+              <td rowspan="2">
+                <div>Gambito: <span class="green-text">Dama</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Wesley So" />
+                  <span>Wesley So</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 8 -->
+      <div class="section">
+        <div class="section-title">Lunes, 17 de marzo - Ajedrez Clásico</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Vladimir Kramnik" />
+                  <span>Vladimir Kramnik</span>
+                </div>
+              </td>
+              <td rowspan="2">20:30</td>
+              <td rowspan="2" class="green-text">1.92</td>
+              <td rowspan="2" class="green-text">3.40</td>
+              <td rowspan="2" class="green-text">2.05</td>
+              <td rowspan="2">
+                <div>Defensa: <span class="green-text">Caro-Kann</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Boris Gelfand" />
+                  <span>Boris Gelfand</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 9 -->
+      <div class="section">
+        <div class="section-title">Martes, 18 de marzo - Ajedrez Rápido</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Alexander Grischuk" />
+                  <span>Alexander Grischuk</span>
+                </div>
+              </td>
+              <td rowspan="2">22:00</td>
+              <td rowspan="2" class="green-text">1.85</td>
+              <td rowspan="2" class="green-text">3.35</td>
+              <td rowspan="2" class="green-text">2.18</td>
+              <td rowspan="2">
+                <div>Variante: <span class="green-text">India</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Peter Svidler" />
+                  <span>Peter Svidler</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Partido 10 -->
+      <div class="section">
+        <div class="section-title">Miércoles, 19 de marzo - Ajedrez Clásico</div>
+        <table class="match-table">
+          <thead class="table-header">
+            <tr>
+              <th>Jugadores</th>
+              <th>Hora</th>
+              <th>Blancas</th>
+              <th>Empate</th>
+              <th>Negras</th>
+              <th>Variante Especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Ding Liren" />
+                  <span>Ding Liren</span>
+                </div>
+              </td>
+              <td rowspan="2">23:00</td>
+              <td rowspan="2" class="green-text">1.95</td>
+              <td rowspan="2" class="green-text">3.50</td>
+              <td rowspan="2" class="green-text">2.00</td>
+              <td rowspan="2">
+                <div>Variante: <span class="green-text">Moderna</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="team-info">
+                  <img src="../../ico/ajedrez.ico" alt="Jan-Krzysztof Duda" />
+                  <span>Jan-Krzysztof Duda</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
       <div class="creative-commons">
-        <img src="../ico/cc_by.ico" alt="By" />
-        <img src="../ico/cc.ico" alt="Creative Commons" />
+        <i class="fab fa-creative-commons text-white fs-3 me-3"></i>
+        <i class="fab fa-creative-commons-by text-white fs-3"></i>
       </div>
       <div class="social-networks">
-        <img src="../ico/twitter.ico" alt="Twitter" />
-        <img src="../ico/instagram.ico" alt="Instagram" />
-        <img src="../ico/facebook.ico" alt="Facebook" />
+        <i class="bi bi-twitter" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-instagram" style="font-size: 1.5rem; color: white"></i>
+        <i class="bi bi-facebook" style="font-size: 1.5rem; color: white"></i>
       </div>
     </footer>
 
-
-    <script src="../js/app.js"></script>t
+    <script src="../../js/menu.js"></script>
   </body>
 </html>

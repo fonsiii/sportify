@@ -1,0 +1,378 @@
+/* ------------------ VARIABLES GLOBALES ------------------ */
+:root {
+    --gradient-bg: linear-gradient(90deg, #005440 0%, #00ba8e 100%);
+  }
+  
+  /* ------------------ REGLAS BASE ------------------ */
+  html,
+  body {
+    margin: 0;
+    flex-direction: column;
+  }
+  
+  body {
+    margin-top: 70px;
+    background: url("../img/fondos/FondoGris.webp") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /* ------------------ NAVBAR (CABECERA) ------------------ */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: var(--gradient-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 2000;
+  }
+  
+  .navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 7%;
+  }
+  
+  .home {
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .home:hover {
+    transform: scale(1.1);
+    color: rgb(209, 209, 209);
+  }
+  
+  .home strong {
+    color: white;
+  }
+
+  .home strong:hover {
+    transform: scale(1.1);
+    color: rgb(209, 209, 209);
+  }
+  
+  .navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navbar .icons i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar a {
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  /* ------------------ BOTÓN DE MENÚ ------------------ */
+  .menu-toggle {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+    z-index: 2100;
+  }
+
+  .menu-toggle:hover {
+    color: rgb(209, 209, 209);
+  }
+  
+  /* ------------------ SIDEBAR (MENÚ LATERAL) ------------------ */
+  .sidebar {
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: calc(100% - 70px);
+    background: url('../img/fondos/FondoGris.webp');
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1500;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+    color: white;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    color: rgb(209, 209, 209);
+    transform: scale(1.1);
+  }
+  
+  /* ------------------ LUDOPATÍA (BOTÓN CENTRAL) ------------------ */
+  .ludopatia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 100px;
+  }
+  
+  .image-button {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.5);
+  }
+  
+  .button-image {
+    width: 100%;
+    height: auto;
+    max-height: 80px;
+    z-index: 1;
+  }
+  
+  .icon-left,
+  .icon-right {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    z-index: 2;
+  }
+  
+  .icon-left {
+    top: 43%;
+    left: 6%;
+  }
+  
+  .icon-right {
+    right: 6%;
+    top: 49%;
+  }
+  
+  .button-text {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+    background-image: url("../img/fondos/dorado.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .button-text strong {
+    font-weight: 700;
+    background-image: url("../img/fondos/dorado.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* ------------------ PRÓXIMOS PARTIDOS ------------------ */
+  .partidos-destacados {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .partidos-destacados .title {
+    font-size: xxx-large;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+    width: 70%;
+  }
+  
+  .section-title {
+    font-size: large;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .table-header th {
+    background-color: #454545;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
+  .match-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    border: none;
+    color: white;
+  }
+  
+  td img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+  }
+  
+  .team-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .team-info img {
+    margin-right: 10px;
+  }
+  
+  .green-text {
+    color: greenyellow;
+  }
+  
+  /* ------------------ FOOTER ------------------ */
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--gradient-bg);
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+  }
+  
+  .creative-commons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 3%;
+  }
+  
+  .creative-commons i {
+    font-size: 2rem;
+    margin: 0 5px;
+    color: white;
+  }
+  
+  .social-networks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding-right: 1%;
+  }
+  
+  .social-networks i {
+    font-size: 1.5rem;
+    margin: 0 5px;
+    color: white;
+  }
+  
+  /* ------------------ MEDIA QUERIES ------------------ */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      left: -100%;
+      top: 70px;
+      height: calc(100% - 70px);
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .partidos-destacados .title {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../../css/misiones.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>SPORTIFY - Misiones</title>
+  </head>
+  <body>
+    <!-- Navbar / Header -->
+    <div class="navbar">
+      <button class="atras" onclick="window.location.href='./battlePass.html'">
+        <i class="bi bi-arrow-left"></i> Atrás
+      </button>
+      <div class="navbar-center">
+        <a class="home"><strong>MISIONES</strong></a>
+      </div>
+    </div>
+
+    <!-- Contenido principal de misiones -->
+    <main class="misiones-main">
+      <!-- Navegación de secciones -->
+      <div class="mission-tabs">
+        <button class="mission-tab active" data-target="diarias">Diarias</button>
+        <button class="mission-tab" data-target="semanales">Semanales</button>
+        <button class="mission-tab" data-target="temporada">Temporada</button>
+      </div>
+
+      <!-- Sección Misiones Diarias -->
+      <section id="diarias" class="mission-section active">
+        <h2>Misiones Diarias</h2>
+        <div class="mission-card">
+          <i class="bi bi-calendar-check mission-icon"></i>
+          <div class="mission-details">
+            <h3>Apuesta en un partido</h3>
+            <p>Realiza una apuesta en cualquier partido de hoy.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-graph-up mission-icon"></i>
+          <div class="mission-details">
+            <h3>Acierta el marcador</h3>
+            <p>Acierta el marcador exacto de un partido.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-lightning-charge mission-icon"></i>
+          <div class="mission-details">
+            <h3>Apuesta en vivo</h3>
+            <p>Realiza una apuesta durante un partido en vivo.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-stack mission-icon"></i>
+          <div class="mission-details">
+            <h3>Apuesta combinada</h3>
+            <p>Completa una apuesta múltiple en un solo día.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-gift mission-icon"></i>
+          <div class="mission-details">
+            <h3>Usa tu bono</h3>
+            <p>Aplica un bono de apuesta en alguna cuota del día.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Misiones Semanales -->
+      <section id="semanales" class="mission-section">
+        <h2>Misiones Semanales</h2>
+        <div class="mission-card">
+          <i class="bi bi-trophy mission-icon"></i>
+          <div class="mission-details">
+            <h3>Apuesta en 3 partidos</h3>
+            <p>Realiza apuestas en tres partidos diferentes durante la semana.</p>
+            <span class="mission-progress">Progreso: 0/3</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-currency-dollar mission-icon"></i>
+          <div class="mission-details">
+            <h3>Apuesta en 5 partidos</h3>
+            <p>Realiza apuestas en cinco partidos a lo largo de la semana.</p>
+            <span class="mission-progress">Progreso: 0/5</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-check-circle mission-icon"></i>
+          <div class="mission-details">
+            <h3>Gana una apuesta múltiple</h3>
+            <p>Completa y gana una apuesta combinada durante la semana.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-bar-chart-line mission-icon"></i>
+          <div class="mission-details">
+            <h3>Acumula XP</h3>
+            <p>Obtén XP apostando en al menos 7 partidos en la semana.</p>
+            <span class="mission-progress">Progreso: 0/7</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-people mission-icon"></i>
+          <div class="mission-details">
+            <h3>Invita a un amigo</h3>
+            <p>Invita a un amigo a unirse y apostar durante la semana.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Misiones de Temporada -->
+      <section id="temporada" class="mission-section">
+        <h2>Misiones de Temporada</h2>
+        <div class="mission-card">
+          <i class="bi bi-award mission-icon"></i>
+          <div class="mission-details">
+            <h3>Maestro de las Apuestas</h3>
+            <p>Apuesta en al menos 10 partidos durante la temporada.</p>
+            <span class="mission-progress">Progreso: 0/10</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-coin mission-icon"></i>
+          <div class="mission-details">
+            <h3>Racha Ganadora</h3>
+            <p>Gana 5 apuestas consecutivas durante la temporada.</p>
+            <span class="mission-progress">Progreso: 0/5</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-graph-up mission-icon"></i>
+          <div class="mission-details">
+            <h3>Campeón de la Temporada</h3>
+            <p>Completa 15 apuestas exitosas durante la temporada.</p>
+            <span class="mission-progress">Progreso: 0/15</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-star mission-icon"></i>
+          <div class="mission-details">
+            <h3>Leyenda de las Apuestas</h3>
+            <p>Apuesta en 20 partidos y alcanza el estatus de diamante.</p>
+            <span class="mission-progress">Progreso: 0/20</span>
+          </div>
+        </div>
+        <div class="mission-card">
+          <i class="bi bi-lightning-charge mission-icon"></i>
+          <div class="mission-details">
+            <h3>Apuesta de Alto Riesgo</h3>
+            <p>Realiza y gana una apuesta con cuota mayor a 5.0.</p>
+            <span class="mission-progress">Progreso: 0/1</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script para cambiar entre secciones -->
+    <script src="../../js/misiones.js"></script>
+    <script src="../../js/efectos.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../css/modales.css" />
+    <title>Modal de Pago - SPORTIFY</title>
+  </head>
+  <body class="same-bg">
+    <header class="navbar">
+      <button onclick="window.location.href='../perfil.html'" class="menu-toggle">
+        ← Volver
+      </button>
+      <a class="home" href="../home.html"><strong>SPORTIFY</strong></a>
+    </header>
+
+    <!-- Modal de Pago -->
+    <div class="modal-container" id="modalContainerPago" style="display: flex">
+      <div class="modal">
+        <div class="tabs">
+          <div id="card-tab" class="tab active pago" onclick="togglePayment('tarjeta')">Tarjeta</div>
+          <div id="prepaid-tab" class="tab pago" onclick="togglePayment('prepago')">Prepago</div>
+          <div id="paypal-tab" class="tab pago" onclick="togglePayment('paypal')">PayPal</div>
+        </div>
+        <div id="card-form">
+          <input type="text" placeholder="Número de tarjeta">
+          <input type="text" placeholder="Nombre del titular">
+          <input type="text" placeholder="Fecha de validez">
+          <input type="text" placeholder="CVV">
+          <input type="text" placeholder="Importe (€)">
+        </div>
+        <div id="prepaid-form" class="hidden">
+          <input type="text" placeholder="Código de prepago">
+        </div>
+        <div id="paypal-form" class="hidden">
+          <button class="next" onclick="redirectToPaypal()">Pagar con PayPal</button>
+        </div>
+        <button id="closeModal" class="next">Aceptar e ingresar</button>
+      </div>
+    </div>
+
+    <script src="../../js/saldo.js"></script>
+  </body>
+</html>
