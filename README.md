@@ -43,27 +43,19 @@ Este proyecto está licenciado bajo la [Licencia Creative Commons BY](https://cr
 
 ### Versión 1
 
--Implementación del resto de páginas implementadas en Figma.
--Sección de red social para poder postear y agregar a tus amigos.
--Interfaz Chatbot Maldini
--Animaciones:  
- 1.Transición suave en botones: Cuando el usuario pase el mouse sobre un botón, debe cambiar de color
-con una transición de 0.3s.  
-2.Efecto hover en tarjetas de apuestas: Las tarjetas donde se muestran las apuestas deben elevarse
-ligeramente al pasar el mouse.  
-3.Animación de carga en la página inicial: Un spinner o un fade-in suave en los elementos principales al
-cargar la web.  
-4.Entrada de elementos con "slide-in": Al entrar a la página, las secciones deben deslizarse suavemente
-desde los lados o desde abajo.  
-5.Animación en listas desplegables: Si tienen menús o listas, que se desplieguen con un efecto de
-deslizamiento suave.  
-6.Cambio de opacidad en fondos al seleccionar: Si el usuario selecciona un equipo o apuesta, que haya un
-cambio de opacidad o sombra.
-
-
+- Implementación del resto de páginas implementadas en Figma.
+- Sección de red social para poder postear y agregar a tus amigos.
+- Interfaz Chatbot Maldini.
+- **Animaciones**:
+  1. **Transición suave en botones**: Cuando el usuario pase el mouse sobre un botón, debe cambiar de color con una transición de 0.3s.
+  2. **Efecto hover en tarjetas de apuestas**: Las tarjetas donde se muestran las apuestas deben elevarse ligeramente al pasar el mouse.
+  3. **Animación de carga en la página inicial**: Un spinner o un fade-in suave en los elementos principales al cargar la web.
+  4. **Entrada de elementos con "slide-in"**: Al entrar a la página, las secciones deben deslizarse suavemente desde los lados o desde abajo.
+  5. **Animación en listas desplegables**: Si tienen menús o listas, que se desplieguen con un efecto de deslizamiento suave.
+  6. **Cambio de opacidad en fondos al seleccionar**: Si el usuario selecciona un equipo o apuesta, debe haber un cambio de opacidad o sombra.
 
 ### Versión 0
 
--  Diseño principal de lo que queremos implementar hecho con Figma.
--  Implementación de la página Home y la de perfil junto a las modales de registro y notificación.
----
+- Diseño principal de lo que queremos implementar hecho con Figma.
+- Implementación de la página Home y la de perfil, junto a las modales de registro y notificación.
+
