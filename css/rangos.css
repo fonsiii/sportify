@@ -42,6 +42,10 @@
     color: transparent;
     font-weight: bold;
   }
+
+  .atras:hover {
+    filter: brightness(0.8);
+  }
   
   .navbar-center {
     flex: 1;
@@ -162,6 +166,7 @@
   .carousel-item {
     flex: 0 0 100%;
     text-align: center;
+    animation: floatEffect 4s ease-in-out infinite;
   }
   
   .carousel-item img {
@@ -259,4 +264,9 @@
     -webkit-background-clip: text;
     color: transparent;
     filter: brightness(1.4) saturate(1.2);
+  }
+
+  @keyframes floatEffect {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
   }
