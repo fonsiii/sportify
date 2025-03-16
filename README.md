@@ -41,6 +41,9 @@ Este proyecto está licenciado bajo la [Licencia Creative Commons BY](https://cr
 
 ## Mejoras y Cambios en Cada Versión
 
+### Versión 2
+- Ligeras modificaciones para mejorar la accesibilidad y lograr una puntuación mayor a 95 por page en Lighthouse.
+
 ### Versión 1
 
 - Implementación del resto de páginas implementadas en Figma.
