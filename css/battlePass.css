@@ -10,6 +10,8 @@ body {
   background: url("../img/fondos/FondoGris.webp") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  position: relative; /* Necesario para los destellos */
+  overflow: hidden; /* Asegura que los destellos no se desborden */
 }
 
 /* ------------------ NAVBAR (HEADER) ------------------ */
@@ -226,6 +228,7 @@ body {
 .carousel-item {
   flex: 0 0 100%;
   text-align: center;
+  z-index: 3;
 }
 
 .carousel-item img {
@@ -369,4 +372,38 @@ body {
   0% { transform: rotate(0deg) scale(1); }
   50% { transform: rotate(180deg) scale(1.1); }
   100% { transform: rotate(360deg) scale(1); }
+}
+
+.star {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 215, 0, 1) 0%, rgba(255, 215, 0, 0) 70%);
+  clip-path: polygon(50% 0%, 60% 35%, 100% 35%, 65% 57%, 75% 100%, 50% 75%, 25% 100%, 35% 57%, 0% 35%, 40% 35%);
+  opacity: 0;
+  animation: star-glow 1s ease-out forwards, rotate-star 2s linear infinite;
+  transform: scale(0) rotate(0deg);
+  z-index: 1;
+}
+
+@keyframes star-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+@keyframes rotate-star {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
